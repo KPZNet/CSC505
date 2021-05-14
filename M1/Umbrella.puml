@@ -11,8 +11,12 @@ repeat;
   :code;
   :shelf;
 repeatwhile (Review Pass) is (fail) not (pass)
-:merge;
-:CI;
+repeat
+  :merge code;
+  :test CI;
+repeatwhile (test pass) is (fail) not (pass)
+
+
 
 @enduml
 
