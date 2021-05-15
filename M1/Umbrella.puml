@@ -2,15 +2,10 @@
 @startuml UmbrellaActivities
 
 start
-partition #LightGrey "New Project" {
+partition #LightGrey  {
 #LightGreen:Software Project;
-note right
-    New Software Project is approved
-    and initiated.
-end note
 }
 repeat
-
 split
   :software project tracking;
 split again
@@ -28,10 +23,6 @@ split again
   :reusability management;
 split again
   :work product preparation and production;
-note
-  Continuous Integration
-  Release and Test
-end note
 end split;
 backward : Next Sprint;
 repeatwhile (Last Sprint) is (NO) not (YES)
