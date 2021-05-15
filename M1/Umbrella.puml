@@ -1,5 +1,7 @@
 
 @startuml UmbrellaActivities
+
+start
 partition #LightGrey "New Project" {
 #LightGreen:Software Project;
 note right
@@ -15,6 +17,7 @@ split again
   :risk management;
 split again
   :software quality assurance;
+
 split again
   :technical reviews;
 split again
@@ -32,6 +35,7 @@ end note
 end split;
 backward : Next Sprint;
 repeatwhile (Last Sprint) is (NO) not (YES)
+
 #LightSteelBlue:release phase;
 
 @enduml
