@@ -1,5 +1,19 @@
 
-@startuml Umbrella
+@startuml UmbrellaActivities
+start;
+:software project tracking;
+:risk management;
+:software quality assurance;
+:technical reviews;
+:measurement;
+:software configuration management;
+:reusability management;
+:work product preparation and production;
+@enduml
+
+
+
+@startuml UmbrellaG
 start;
 :task story;
 fork
