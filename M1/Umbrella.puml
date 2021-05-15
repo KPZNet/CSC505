@@ -1,14 +1,39 @@
 
 @startuml UmbrellaActivities
-start;
-:software project tracking;
-:risk management;
-:software quality assurance;
-:technical reviews;
-:measurement;
-:software configuration management;
-:reusability management;
-:work product preparation and production;
+partition #LightGrey "New Project" {
+#LightGreen:Software Project;
+note right
+    New Software Project is approved
+    and initiated.
+end note
+}
+repeat
+
+split
+  :software project tracking;
+split again
+  :risk management;
+split again
+  :software quality assurance;
+split again
+  :technical reviews;
+split again
+  :measurement;
+split again
+  :software configuration management;
+split again
+  :reusability management;
+split again
+  :work product preparation and production;
+note
+  Continuous Integration
+  Release and Test
+end note
+end split;
+backward : Next Sprint;
+repeatwhile (Last Sprint) is (NO) not (YES)
+#LightSteelBlue:release phase;
+
 @enduml
 
 
