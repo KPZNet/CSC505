@@ -1,61 +1,77 @@
 
 @startuml UmbrellaActivities
-|New SW Project|
 
 start
 
 #GreenYellow:Start Project;
 
-|#LavenderBlush|Umbrella Activities|
 repeat
 
 split
   :**__software project tracking__**
 
-  gauge current progress
+  Gauge current progress
   against project plan
   and make any adjustments
   ;
 split again
   :**__risk management__**
 
-  Asses any risks or potential risks
-  that may affect the outcome of the project
+  Asses any risks or
+  potential risks
+  that may affect the
+  outcome of the project
   ;
 split again
-  :**software quality assurance**
+  :**__software quality assurance__**
   
-  Perform continuous quality assurance 
-  activites
+  Perform continuous quality
+  assurance activites to 
+  ensure quality 
+  deliverables
+  ;
+split again
+  :**__Technical reviews__**
+  
+  Assess and review project 
+  collateral to uncover and 
+  remove errors 
+  before progressing to next 
+  activity 
   ;
 split again
   :**__measurement__**
   
-  Assist the team in measurments that
-  ensure project is meeting customer needs
+  Assist the team in 
+  measurments that
+  ensure project is 
+  meeting customer needs
   ;
 split again
   :**__software configuration management__**
 
-  Manage the effects of various changes
+  Manage the effects of 
+  various changes
   in the project lifecycle;
 split again
   :**__reusability management__**
 
-  Identify criteria for product reusability 
+  Identify criteria for product 
+  reusability 
   and component reusability
   ;
 split again
   :**__work product preparation and production__**
 
-  Activities required to product work related collateral 
-  such as models or documents
+  Activities required to product 
+  work related collateral 
+  such as models or 
+  documents
   ;
 end split;
-backward :**Continue**\nrepeat throughout project lifecycle;
+backward :**Continue**\n\nrepeat throughout project lifecycle;
 
 repeatwhile (Project Complete) is (NO) not (YES)
-|New SW Project|
 
 #GreenYellow:release;
 
