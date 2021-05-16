@@ -8,14 +8,14 @@ start
 repeat
 
 split
-  :**__software project tracking__**
+  :**__Software project tracking__**
 
   Gauge current progress
   against project plan
   and make any adjustments
   ;
 split again
-  :**__risk management__**
+  :**__Risk management__**
 
   Asses any risks or
   potential risks
@@ -23,7 +23,7 @@ split again
   outcome of the project
   ;
 split again
-  :**__software quality assurance__**
+  :**__Software quality assurance__**
   
   Perform continuous quality
   assurance activites to 
@@ -40,7 +40,7 @@ split again
   activity 
   ;
 split again
-  :**__measurement__**
+  :**__Measurement__**
   
   Assist the team in 
   measurments that
@@ -48,20 +48,20 @@ split again
   meeting customer needs
   ;
 split again
-  :**__software configuration management__**
+  :**__Software configuration management__**
 
   Manage the effects of 
   various changes
   in the project lifecycle;
 split again
-  :**__reusability management__**
+  :**__Reusability management__**
 
   Identify criteria for product 
   reusability 
   and component reusability
   ;
 split again
-  :**__work product preparation and production__**
+  :**__Work product preparation and production__**
 
   Activities required to product 
   work related collateral 
