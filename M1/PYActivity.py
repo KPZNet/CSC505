@@ -13,13 +13,21 @@ __status__ = "Course Work"
     Umbrella activites are done continuously 
     throughout the duration of a project
 """
-from datetime import date
+from datetime import datetime
 import time
 
 
 try:
     #Start for marking execution time
     start_time = time.time()
+
+    # datetime object containing current date and time
+    now = datetime.now()
+    
+    # dd/mm/YY H:M:S
+    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+    print("\n\nDate Time : ", dt_string)	
+
 
     UmbrellaActivities = []
     UmbrellaActivities.append("software project tracking")
