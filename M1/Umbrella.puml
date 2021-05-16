@@ -1,18 +1,20 @@
 
 @startuml UmbrellaActivities
+|New Project|
 
 start
-partition #LightGrey  {
-#LightGreen:Software Project;
-}
+
+#GreenYellow:Start Project;
+
+|#LavenderBlush|Umbrella Activities|
 repeat
+
 split
   :software project tracking;
 split again
   :risk management;
 split again
   :software quality assurance;
-
 split again
   :technical reviews;
 split again
@@ -26,37 +28,15 @@ split again
 end split;
 backward :Next Sprint;
 repeatwhile (Last Sprint) is (NO) not (YES)
+|New Project|
 
-#LightSteelBlue:release phase;
-
-@enduml
-
-
-
-@startuml UmbrellaG
-start;
-:task story;
-fork
-  :test stubs;
-fork again
-  :detailed design;
-end merge;
-repeat;
-  :code;
-  :shelf;
-repeatwhile (Review Pass) is (fail) not (pass)
-repeat
-  :merge code;
-  :test CI;
-repeatwhile (test pass) is (fail) not (pass)
-
-
+#GreenYellow:release;
 
 @enduml
 
 
 
-@startuml A
+@startuml
 start
 fork
   :action 1;
