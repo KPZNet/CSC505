@@ -52,7 +52,8 @@ split again
   such as models or documents
   ;
 end split;
-backward :Continue;
+backward :**Continue**\nrepeat throughout project lifecycle;
+
 repeatwhile (Project Complete) is (NO) not (YES)
 |New SW Project|
 
