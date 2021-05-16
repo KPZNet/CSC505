@@ -10,22 +10,50 @@ start
 repeat
 
 split
-  :software project tracking;
+  :**__software project tracking__**
+
+  gauge current progress
+  against project plan
+  and make any adjustments
+  ;
 split again
-  :risk management;
+  :**__risk management__**
+
+  Asses any risks or potential risks
+  that may affect the outcome of the project
+  ;
 split again
-  :software quality assurance;
+  :**software quality assurance**
+  
+  Perform continuous quality assurance 
+  activites
+  ;
 split again
-  :measurement;
+  :**__measurement__**
+  
+  Assist the team in measurments that
+  ensure project is meeting customer needs
+  ;
 split again
-  :software configuration management;
+  :**__software configuration management__**
+
+  Manage the effects of various changes
+  in the project lifecycle;
 split again
-  :reusability management;
+  :**__reusability management__**
+
+  Identify criteria for product reusability 
+  and component reusability
+  ;
 split again
-  :work product preparation and production;
+  :**__work product preparation and production__**
+
+  Activities required to product work related collateral 
+  such as models or documents
+  ;
 end split;
-backward :Next Sprint;
-repeatwhile (Last Sprint) is (NO) not (YES)
+backward :Continue;
+repeatwhile (Project Complete) is (NO) not (YES)
 |New SW Project|
 
 #GreenYellow:release;
