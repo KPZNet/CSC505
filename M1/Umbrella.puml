@@ -3,10 +3,10 @@
 
 start
 
-#GreenYellow:Start Project;
+#GreenYellow:New Project;
 
 repeat
-
+#GreenYellow:Sprint Start;
 split
   :**__Software project tracking__**
 
@@ -68,11 +68,18 @@ split again
   documents
   ;
 end split;
-backward :**Continue**\n\nrepeat throughout project lifecycle;
+
+:Print Umbrella Activities
+
+Printout Umbrella Activities 
+using Python
+;
+
+backward :**Next sprint**\n\nrepeat throughout project lifecycle;
 
 repeatwhile (Project Complete) is (NO) not (YES)
 
-#GreenYellow:release;
+#GreenYellow:Release Phase;
 
 @enduml
 
