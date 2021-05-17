@@ -30,16 +30,16 @@ try:
 
 
     UmbrellaActivities = []
-    UmbrellaActivities.append("software project tracking")
-    UmbrellaActivities.append("risk management")
-    UmbrellaActivities.append("software quality assurance")
-    UmbrellaActivities.append("measurement")
-    UmbrellaActivities.append("software configuration management")
-    UmbrellaActivities.append("reusability management")
-    UmbrellaActivities.append("work product preparation and production")
+    UmbrellaActivities.append("Software project tracking")
+    UmbrellaActivities.append("Risk management")
+    UmbrellaActivities.append("Software quality assurance")
+    UmbrellaActivities.append("Technical Reviews")
+    UmbrellaActivities.append("Measurement")
+    UmbrellaActivities.append("Software configuration management")
+    UmbrellaActivities.append("Reusability management")
+    UmbrellaActivities.append("Work product preparation and production")
 
-
-    print("\nUmbrella Activities\n\n")
+    print("Umbrella Activities\n")
     for i, umbrellaActivity in enumerate(UmbrellaActivities):
         print("{0}: {1} ".format(i+1, umbrellaActivity))
 
