@@ -25,33 +25,24 @@ try:
 
     def waterFallActivity():
         id = 0
-        actityName: str = "not set"
+        abbrev: str = "not set"
+        title: str = "not set"
+        desc: str = "not set"
 
         def __init__(self):
             id = 0
-        def setActivityName():
+
+        def setActivityDescription(_title, _abbrev, _desc):
+            desc = _desc
+            title = _title
+
+
+    # dd/mm/YY H:M:S
+    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+    print("\n\nDate Time : ", dt_string)
 
 
 
-        # dd/mm/YY H:M:S
-        dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-        print("\n\nDate Time : ", dt_string)
-
-
-
-    UmbrellaActivities = []
-    UmbrellaActivities.append("Software project tracking")
-    UmbrellaActivities.append("Risk management")
-    UmbrellaActivities.append("Software quality assurance")
-    UmbrellaActivities.append("Technical Reviews")
-    UmbrellaActivities.append("Measurement")
-    UmbrellaActivities.append("Software configuration management")
-    UmbrellaActivities.append("Reusability management")
-    UmbrellaActivities.append("Work product preparation and production")
-
-    print("Umbrella Activities\n")
-    for i, umbrellaActivity in enumerate(UmbrellaActivities):
-        print("{0}: {1} ".format(i+1, umbrellaActivity))
 
 
     #Print out execution time
