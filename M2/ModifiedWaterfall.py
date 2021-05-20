@@ -15,33 +15,28 @@ __status__ = "Course Work"
 from datetime import datetime
 import time
 
-
 try:
     #Start for marking execution time
     start_time = time.time()
 
     # datetime object containing current date and time
     now = datetime.now()
+    
+    # dd/mm/YY H:M:S
+    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+    print("\n\nDate Time : ", dt_string)
 
     def waterFallActivity():
         id = 0
-        abbrev: str = "not set"
         title: str = "not set"
         desc: str = "not set"
 
         def __init__(self):
             id = 0
 
-        def setActivityDescription(_title, _abbrev, _desc):
+        def setActivityDescription(_title, _desc):
             desc = _desc
             title = _title
-
-
-    # dd/mm/YY H:M:S
-    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-    print("\n\nDate Time : ", dt_string)
-
-
 
 
 
