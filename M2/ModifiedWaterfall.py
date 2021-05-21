@@ -28,18 +28,36 @@ try:
     print("\n\nDate Time : ", dt_string)
 
     def findActivity(activity, activities):
-        retActivity = 0
+        retActivity = None
         for index, a in enumerate(activities):
             act = a['Name']
             if act == activity:
-                retActivity = index
+                retActivityIndex = index
+                retActivity = a
+                break
+        return retActivity
+
+    def printOutActivities(activity):
+        name = activity['Name']
+        description = activity['Description']
+        actionsList = activity['Actions']
+        inputList = activity['InputActivities']
+        outputList = activity['OutputActivities']
+
+        print('\n\n')
+        print("*** Waterfall Activity ***")
+        print('Name of Activity: {0}'.format(name))
+        print('Description: {0}'.format(description))
+        print('Inputs to Activity: {0}'.format(inputList))
+        print('Outputs of Activity: {0}'.format(outputList))
+        print("******************")
 
 
     def printOutActivity(activity, waterfallModel):
         activs = wfallmodel['Activities']
-        if activity in activs:
-            i = waterfallModel.index(activity)
-            act = waterfallModel(i)
+        a = findActivity(activity, activs)
+        if a != None:
+            printOutActivities(a)
 
 
     with open("WaterfallCyc.json", "r") as read_file:
