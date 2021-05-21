@@ -63,8 +63,11 @@ try:
     with open("WaterfallCyc.json", "r") as read_file:
         wfallmodel = json.load(read_file)
 
-
-    printOutActivity("Communication", wfallmodel)
+    inp = ''
+    while inp != 'done':
+        inp = input('Enter Waterfall Activity :')
+        if inp != 'done':
+            printOutActivity(inp, wfallmodel)
 
     #Print out execution time
     print("\n\n\nEXECUTION Time : %s seconds " % (time.time() - start_time))
