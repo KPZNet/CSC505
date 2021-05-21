@@ -27,25 +27,26 @@ try:
     dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
     print("\n\nDate Time : ", dt_string)
 
-    def waterFallActivity():
-        id = 0
-        title: str = "not set"
-        desc: str = "not set"
-
-        def __init__(self):
-            id = 0
-            title = "not set"
-            desc = "not set"
-
-        def setActivityDescription(_title, _desc):
-            desc = _desc
-            title = _title
-
-        def printActivity(_activity):
-            print('not set')
+    def findActivity(activity, activities):
+        retActivity = 0
+        for index, a in enumerate(activities):
+            act = a['Name']
+            if act == activity:
+                retActivity = index
 
 
+    def printOutActivity(activity, waterfallModel):
+        activs = wfallmodel['Activities']
+        if activity in activs:
+            i = waterfallModel.index(activity)
+            act = waterfallModel(i)
 
+
+    with open("WaterfallCyc.json", "r") as read_file:
+        wfallmodel = json.load(read_file)
+
+
+    printOutActivity("Communication", wfallmodel)
 
     #Print out execution time
     print("\n\n\nEXECUTION Time : %s seconds " % (time.time() - start_time))
