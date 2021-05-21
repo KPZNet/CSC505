@@ -27,7 +27,8 @@ try:
     dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
     print("\n\nDate Time : ", dt_string)
 
-    def findActivity(activity, activities):
+    def findActivity(activity, wfallmodel):
+        activities = wfallmodel['Activities']
         retActivity = None
         for index, a in enumerate(activities):
             act = a['Name']
@@ -52,10 +53,8 @@ try:
         print('Outputs of Activity: {0}'.format(outputList))
         print("******************")
 
-
     def printOutActivity(activity, waterfallModel):
-        activs = wfallmodel['Activities']
-        a = findActivity(activity, activs)
+        a = findActivity(activity, waterfallModel)
         if a != None:
             printOutActivities(a)
 
@@ -67,7 +66,11 @@ try:
     while inp != 'done':
         inp = input('Enter Waterfall Activity :')
         if inp != 'done':
-            printOutActivity(inp, wfallmodel)
+            a = findActivity(inp, wfallmodel)
+            if a != None:
+                printOutActivity(inp, wfallmodel)
+            else:
+                print("Activity {0} Not Found".format(inp))
 
     #Print out execution time
     print("\n\n\nEXECUTION Time : %s seconds " % (time.time() - start_time))
