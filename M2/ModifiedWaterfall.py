@@ -14,6 +14,7 @@ __status__ = "Course Work"
 """
 from datetime import datetime
 import time
+import json
 
 try:
     #Start for marking execution time
@@ -33,10 +34,16 @@ try:
 
         def __init__(self):
             id = 0
+            title = "not set"
+            desc = "not set"
 
         def setActivityDescription(_title, _desc):
             desc = _desc
             title = _title
+
+        def printActivity(_activity):
+            print('not set')
+
 
 
 
