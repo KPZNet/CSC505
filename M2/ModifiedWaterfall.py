@@ -63,7 +63,7 @@ try:
 
     inp = ''
     while inp.upper() != 'done'.upper():
-        inp = input('Enter Waterfall Activity :')
+        inp = input('Enter Waterfall Activity : ')
         if inp.upper() != 'done'.upper():
             a = findActivity(inp, wfallmodel)
             if a != None:
