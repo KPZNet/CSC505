@@ -51,7 +51,7 @@ try:
         print('Actions: {0}'.format(actionsList))
         print('Inputs to \"{1}\" : {0}'.format(inputList, name))
         print('Outputs of \"{1}\" : {0}\n'.format(outputList, name))
-        print("******************\n")
+        print("**************************")
 
     def printOutActivity(activity, waterfallModel):
         a = findActivity(activity, waterfallModel)
