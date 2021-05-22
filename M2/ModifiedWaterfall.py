@@ -84,17 +84,17 @@ try:
     with open("WaterfallCyc.json", "r") as read_file:
         wfallmodel = json.load(read_file)
 
-    inp = ''
-    while inp.upper() != 'done'.upper():
+    inp = 'GO'
+    exitList = ['DONE', 'EXIT', 'QUIT', 'STOP', 'OVER', 'OUT']
+    while False == ( inp.upper() in exitList ):
         inp = input('\nEnter Waterfall Activity : ')
-        if inp.upper() != 'done'.upper():
-            a = findActivity(inp, wfallmodel)
-            if a != None:
-                printOutActivity(inp, wfallmodel)
-            else:
-                print("Activity {0} Not Found".format(inp))
+        a = findActivity(inp, wfallmodel)
+        if a != None:
+            printOutActivity(inp, wfallmodel)
         else:
-            print('Thank you')
+            print("Activity {0} Not Found".format(inp))
+
+    print('Thank you')
     #Print out execution time
     print("\n\n\nEXECUTION Time : %s seconds " % (time.time() - start_time))
 
