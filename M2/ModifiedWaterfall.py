@@ -28,6 +28,15 @@ try:
     print("\n\nDate Time : ", dt_string)
 
     def findActivity(activity, wfallmodel):
+        """
+        Searches list of activities to find
+        requested activity and return found
+        activity
+
+        :param activity: waterfall activity object
+        :param wfallmodel: input waterfall database
+        :return: activity object
+        """
         activities = wfallmodel['Activities']
         retActivity = None
         for index, a in enumerate(activities):
@@ -38,6 +47,12 @@ try:
         return retActivity
 
     def printOutActivities(activity):
+        """
+        Prints out the waterfall activity in a
+        nicely formatted output
+
+        :param activity: Waterfall activity object
+        """
         name = activity['Name']
         description = activity['Description']
         actionsList = activity['Actions']
@@ -54,6 +69,14 @@ try:
         print("**************************")
 
     def printOutActivity(activity, waterfallModel):
+        """
+        Finds the requested waterfall activity
+        and, if found, prints out the activity
+        in a nicely formatted output
+
+        :param activity: activity name to find
+        :param waterfallModel: waterfall activity database
+        """
         a = findActivity(activity, waterfallModel)
         if a != None:
             printOutActivities(a)
