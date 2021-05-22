@@ -32,8 +32,7 @@ try:
         retActivity = None
         for index, a in enumerate(activities):
             act = a['Name']
-            if act == activity:
-                retActivityIndex = index
+            if act.upper() == activity.upper():
                 retActivity = a
                 break
         return retActivity
@@ -46,32 +45,33 @@ try:
         outputList = activity['OutputActivities']
 
         print('\n\n')
-        print("*** Waterfall Activity ***")
+        print("*** Waterfall Activity ***\n")
         print('Name of Activity: {0}'.format(name))
         print('Description: {0}'.format(description))
-        print('Inputs to Activity: {0}'.format(inputList))
-        print('Outputs of Activity: {0}'.format(outputList))
-        print("******************")
+        print('Actions: {0}'.format(actionsList))
+        print('Inputs to \"{1}\" : {0}'.format(inputList, name))
+        print('Outputs of \"{1}\" : {0}\n'.format(outputList, name))
+        print("******************\n")
 
     def printOutActivity(activity, waterfallModel):
         a = findActivity(activity, waterfallModel)
         if a != None:
             printOutActivities(a)
 
-
     with open("WaterfallCyc.json", "r") as read_file:
         wfallmodel = json.load(read_file)
 
     inp = ''
-    while inp != 'done':
+    while inp.upper() != 'done'.upper():
         inp = input('Enter Waterfall Activity :')
-        if inp != 'done':
+        if inp.upper() != 'done'.upper():
             a = findActivity(inp, wfallmodel)
             if a != None:
                 printOutActivity(inp, wfallmodel)
             else:
                 print("Activity {0} Not Found".format(inp))
-
+        else:
+            print('Thank you')
     #Print out execution time
     print("\n\n\nEXECUTION Time : %s seconds " % (time.time() - start_time))
 
