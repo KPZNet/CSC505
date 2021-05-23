@@ -12,8 +12,6 @@ __status__ = "Course Work"
     definition and details in a well-formatted
     printout
 """
-from datetime import datetime
-import time
 import json
 
 
@@ -82,7 +80,7 @@ class ceglia:
         exitList = ['DONE', 'EXIT', 'QUIT', 'STOP', 'OVER', 'OUT']
         while conti:
             inp = input('\nEnter Waterfall Activity : ')
-            conti = ( False == ( inp.upper() in exitList ) )
+            conti = (False == (inp.upper() in exitList))
             if conti == True:
                 a = self.findActivity(inp, wfallmodel)
                 if a != None:
@@ -91,6 +89,7 @@ class ceglia:
                     print("Activity {0} Not Found".format(inp))
 
         print('Thank you')
+
 
 try:
 
