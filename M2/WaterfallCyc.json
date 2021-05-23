@@ -59,15 +59,44 @@
       ]
     },
     {
+      "Name": "Internal Deployment",
+      "Description": "Product MVP is deployed internally to end users and QA for Cycle Testing and Verification.",
+      "Actions": [
+        "user testing",
+        "alpha release"
+      ],
+      "InputActivities": [
+        "Construction"
+      ],
+      "OutputActivities": [
+        "QA Test"
+      ]
+    },
+    {
+      "Name": "QA Test",
+      "Description": "MVP product is deployed in live environment and tested end to end.  Alpha and Beta tests",
+      "Actions": [
+        "System Test",
+        "Performance Testing"
+      ],
+      "InputActivities": [
+        "Internal Deployment"
+      ],
+      "OutputActivities": [
+        "Deployment",
+        "Communications"
+      ]
+    },
+    {
       "Name": "Deployment",
-      "Description": "Project is released.  Project is deployed to marketing channels. Beta sites or complete installations are executed.",
+      "Description": "Project is released.  Project is deployed to marketing channels.",
       "Actions": [
         "Delivery",
         "Support",
         "Feedback"
       ],
       "InputActivities": [
-        "Construction"
+        "QA Test"
       ],
       "OutputActivities": [
         "END"

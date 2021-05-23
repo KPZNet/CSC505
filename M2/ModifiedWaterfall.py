@@ -72,12 +72,17 @@ class ceglia:
             self.printOutActivities(a)
 
     def runInput(self):
+        """
+        Run program, ask user for waterfall activity name
+        Print out activity description
+        repeat until user exits
+        """
+
         with open("WaterfallCyc.json", "r") as read_file:
             wfallmodel = json.load(read_file)
 
-        inp = 'GO'
         conti = True
-        exitList = ['DONE', 'EXIT', 'QUIT', 'STOP', 'OVER', 'OUT']
+        exitList = ['DONE', 'EXIT', 'QUIT', 'STOP', 'OVER', 'OUT', 'Q']
         while conti:
             inp = input('\nEnter Waterfall Activity : ')
             conti = (False == (inp.upper() in exitList))
