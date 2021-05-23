@@ -16,18 +16,10 @@ from datetime import datetime
 import time
 import json
 
-try:
-    #Start for marking execution time
-    start_time = time.time()
 
-    # datetime object containing current date and time
-    now = datetime.now()
-    
-    # dd/mm/YY H:M:S
-    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-    print("\n\nDate Time : ", dt_string)
+class ceglia:
 
-    def findActivity(activity, wfallmodel):
+    def findActivity(self, activity, wfallmodel):
         """
         Searches list of activities to find
         requested activity and return found
@@ -46,7 +38,7 @@ try:
                 break
         return retActivity
 
-    def printOutActivities(activity):
+    def printOutActivities(self, activity):
         """
         Prints out the waterfall activity in a
         nicely formatted output
@@ -68,7 +60,7 @@ try:
         print('Outputs of \"{1}\" : {0}\n'.format(outputList, name))
         print("**************************")
 
-    def printOutActivity(activity, waterfallModel):
+    def printOutActivity(self, activity, waterfallModel):
         """
         Finds the requested waterfall activity
         and, if found, prints out the activity
@@ -77,29 +69,36 @@ try:
         :param activity: activity name to find
         :param waterfallModel: waterfall activity database
         """
-        a = findActivity(activity, waterfallModel)
+        a = self.findActivity(activity, waterfallModel)
         if a != None:
-            printOutActivities(a)
+            self.printOutActivities(a)
 
-    with open("WaterfallCyc.json", "r") as read_file:
-        wfallmodel = json.load(read_file)
+    def runInput(self):
+        with open("WaterfallCyc.json", "r") as read_file:
+            wfallmodel = json.load(read_file)
 
-    inp = 'GO'
-    exitList = ['DONE', 'EXIT', 'QUIT', 'STOP', 'OVER', 'OUT']
-    while False == ( inp.upper() in exitList ):
-        inp = input('\nEnter Waterfall Activity : ')
-        a = findActivity(inp, wfallmodel)
-        if a != None:
-            printOutActivity(inp, wfallmodel)
-        else:
-            print("Activity {0} Not Found".format(inp))
+        inp = 'GO'
+        conti = True
+        exitList = ['DONE', 'EXIT', 'QUIT', 'STOP', 'OVER', 'OUT']
+        while conti:
+            inp = input('\nEnter Waterfall Activity : ')
+            conti = ( False == ( inp.upper() in exitList ) )
+            if conti == True:
+                a = self.findActivity(inp, wfallmodel)
+                if a != None:
+                    self.printOutActivity(inp, wfallmodel)
+                else:
+                    print("Activity {0} Not Found".format(inp))
 
-    print('Thank you')
-    #Print out execution time
-    print("\n\n\nEXECUTION Time : %s seconds " % (time.time() - start_time))
+        print('Thank you')
+
+try:
+
+    c = ceglia()
+    c.runInput()
 
 except(Exception) as e:
     print("<<< EXCEPTION >>>")
     print(e)
 finally:
-    print("Completed")
+    print("")
