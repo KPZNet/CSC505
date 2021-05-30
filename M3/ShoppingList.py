@@ -37,6 +37,11 @@ class ShoppingListApp:
             print('Tool : {0}'.format(pc) )
 
 try:
+    # datetime object containing current date and time
+    now = datetime.now()
+    # dd/mm/YY H:M:S
+    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+    print("\nDate Time : ", dt_string)	
 
     c = ShoppingListApp()
     c.GetPrintCode()
