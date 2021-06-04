@@ -1,36 +1,46 @@
 {
-    "Qualities":{
-    "Engineer":{
-        "Education":"STEM or other related",
-        "Time Management":"Good time management skills",
-        "Team Player":"Enjoys working and thrives in team",
-        "Open":"Brutally Honest and clear and open"
-    },
-    "Manager":{
-        "Fair":"Encourages and supports all team members",
-        "Supportive":"Encourages and supports all team members",
-        "Decisive":"Can make clear decisions"
-    },
-    "Product Owner":{
-    "Communication":"Clear and engaging communicator",
-    "Clarity":"Can translate user needs to clear requirements",
-    "Engaged":"Engaged with team and participates"
-    },
-    "Developer":{
-        "Passionate":"Enthusiastic and motivated",
-        "Accountable":"Will deliver on promises",
-        "Creative":"Creatively looks for problems and is imaginative",
-        "Realist":"Brutally honest and truthful"
-    },
-    "QA":{
-        "Curious":"Inquisitive and asks questions",
-        "Alert":"Attentive",
-        "Relentless":"Driven to find and discover"
-    },
-    "Scrum Master":{
-        "Results Driven":"Focused on completion",
-        "Coordination":"Ability to coordinate and rally individuals",
-        "Motivating":"Creates productive atmospher"
-    }
+    "Qualities":
+    {
+        "Engineer":
+        {
+            "Education":"STEM or other related",
+            "Time Management":"Good time management skills",
+            "Team Player":"Enjoys working and thrives in team",
+            "Open":"Brutally Honest and clear and open",
+            "Children":
+            {
+                "Manager":
+                {
+                    "Fair":"Encourages and supports all team members",
+                    "Supportive":"Encourages and supports all team members",
+                    "Decisive":"Can make clear decisions"
+                },
+                "Product Owner":
+                {
+                    "Communication":"Clear and engaging communicator",
+                    "Clarity":"Can translate user needs to clear requirements",
+                    "Engaged":"Engaged with team and participates"
+                },
+                "Developer":
+                {
+                    "Passionate":"Enthusiastic and motivated",
+                    "Accountable":"Will deliver on promises",
+                    "Creative":"Creatively looks for problems and is imaginative",
+                    "Realist":"Brutally honest and truthful"
+                },
+                "QA":
+                {
+                    "Curious":"Inquisitive and asks questions",
+                    "Alert":"Attentive",
+                    "Relentless":"Driven to find and discover"
+                },
+                "Scrum Master":
+                {
+                    "Results Driven":"Focused on completion",
+                    "Coordination":"Ability to coordinate and rally individuals",
+                    "Motivating":"Creates productive atmospher"
+                }    
+            }
+        }
     }
 }

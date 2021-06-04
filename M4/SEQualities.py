@@ -20,6 +20,9 @@ class SWTeam:
     def printOutActivity(self, quality):
         print("stub")
 
+    def printAllTeam(self, swTeam):
+        print("ALL Team")
+
     def runInput(self):
         """
         Run program, ask user for SW Team Member
@@ -37,6 +40,8 @@ class SWTeam:
             conti = (False == (inp.upper() in exitList))
             if conti == True:
                 a = self.findActivity(inp, swteamlist)
+                if a == 'ALL':
+                    self.printAllTeam(swteamlist)
                 if a != None:
                     self.printOutActivity(a)
                 else:
