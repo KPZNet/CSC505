@@ -14,14 +14,16 @@ import json
 
 class SWTeam:
 
-    def findActivity(self, activity, swqualities):
-        print("stub")
+    def FindTrait(self, input, swqualities):
+        quals = swqualities['Qualities']
+        trait = quals[input]
+        return trait
 
-    def printOutActivity(self, quality):
-        print("stub")
+    def PrintTrait(self, trait):
+        for t in trait:
+            descript = trait[t]
+            print("{0} : {1}".format(t, descript))
 
-    def printAllTeam(self, swTeam):
-        print("ALL Team")
 
     def runInput(self):
         """
@@ -31,19 +33,17 @@ class SWTeam:
         """
 
         with open("Qualities.JSON", "r") as read_file:
-            swteamlist = json.load(read_file)
+            traitList = json.load(read_file)
 
         conti = True
         exitList = ['DONE', 'EXIT', 'QUIT', 'STOP', 'OVER', 'OUT', 'Q']
         while conti:
-            inp = input('\nEnter SW Team Member : ')
+            inp = input('\nEnter Personality Trait : ')
             conti = (False == (inp.upper() in exitList))
             if conti == True:
-                a = self.findActivity(inp, swteamlist)
-                if a == 'ALL':
-                    self.printAllTeam(swteamlist)
+                a = self.FindTrait(inp, traitList)
                 if a != None:
-                    self.printOutActivity(a)
+                    self.PrintTrait(a)
                 else:
                     print("Activity {0} Not Found".format(inp))
 

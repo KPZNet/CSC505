@@ -1,46 +1,27 @@
 {
     "Qualities":
     {
-        "Engineer":
+
+        "Passionate":
         {
-            "Education":"STEM or other related",
-            "Time Management":"Good time management skills",
-            "Team Player":"Enjoys working and thrives in team",
-            "Open":"Brutally Honest and clear and open",
-            "Children":
-            {
-                "Manager":
-                {
-                    "Fair":"Encourages and supports all team members",
-                    "Supportive":"Encourages and supports all team members",
-                    "Decisive":"Can make clear decisions"
-                },
-                "Product Owner":
-                {
-                    "Communication":"Clear and engaging communicator",
-                    "Clarity":"Can translate user needs to clear requirements",
-                    "Engaged":"Engaged with team and participates"
-                },
-                "Developer":
-                {
-                    "Passionate":"Enthusiastic and motivated",
-                    "Accountable":"Will deliver on promises",
-                    "Creative":"Creatively looks for problems and is imaginative",
-                    "Realist":"Brutally honest and truthful"
-                },
-                "QA":
-                {
-                    "Curious":"Inquisitive and asks questions",
-                    "Alert":"Attentive",
-                    "Relentless":"Driven to find and discover"
-                },
-                "Scrum Master":
-                {
-                    "Results Driven":"Focused on completion",
-                    "Coordination":"Ability to coordinate and rally individuals",
-                    "Motivating":"Creates productive atmospher"
-                }    
-            }
+            "Curious":"Loves to learn, genuinely interested seeks details",
+            "Engaged":"Pays attention, active listener, follows customer lead",
+            "Inquisitive":"Interested, inclined to ask questions and find answers",
+            "Enthusiastic": "Boundless Energy and infectious excitement, loves to succeed"
+
+        },
+        "Determined":
+        {
+            "Time Management":"Can follow a schedule and task oriented",
+            "Driven":"Relentless, motivated, compelled to accomplish",
+            "Brutally Honest":"Truthful and Open. Transparent"
+        },
+        "Team Player":
+        {
+            "Collaborative":"Enjoys working with others and takes input from others",
+            "Rally":"Can motivate and energize others to work together",
+            "Compromise":"Can compromise and accept other opinions and drive"
         }
     }
+
 }
