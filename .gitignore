@@ -2,5 +2,10 @@ workspace.code-workspace
 .vscode
 .env
 .idea
+.pyproj
+.sln
+.vs
+
+
 
 
